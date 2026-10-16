@@ -636,7 +636,7 @@ export default function Home() {
           <div className="section-head">
             <div>
               <div className="kicker">Get in touch</div>
-              <h2>Let's <span className="red">connect.</span></h2>
+              <h2>Let&apos;s<span className="red">connect.</span></h2>
             </div>
             <p className="intro">
               Questions about the event, audience registration or speaker
