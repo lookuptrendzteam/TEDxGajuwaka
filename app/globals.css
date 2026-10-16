@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --red: #eb0028;
+  --bg: #080808;
+  --panel: #121212;
+  --muted: #a5a5a5;
+  --line: rgba(255, 255, 255, 0.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  color: #f7f7f7;
+  background:
+    radial-gradient(ellipse at 85% 5%, rgba(235, 0, 40, 0.14), transparent 35%),
+    var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  color: white;
+  background: var(--red);
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+h1 {
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+p {
+  color: #bcbcbc;
+}
+
+button, input, textarea, select {
+  border-radius: 10px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 14px 16px;
+  color: white;
+  background: #171717;
+  border: 1px solid #383838;
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(235, 0, 40, 0.12);
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(235, 0, 40, 0.12);
+  }
+  50% {
+    box-shadow: 0 0 38px rgba(235, 0, 40, 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main > section {
+    animation: riseIn 0.8s ease both;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 13vw, 4.8rem);
+  }
+
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
