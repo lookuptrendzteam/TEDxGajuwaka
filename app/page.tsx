@@ -609,7 +609,7 @@ export default function Home() {
               </div>
 
               <form onSubmit={submitNomination}>
-                <label className="label">Nominee's full name
+                <label className="label">Nominee&apos;s full name
                   <input className="field" value={nomination.nominee_name} onChange={(e) => setNomination({ ...nomination, nominee_name: e.target.value })} placeholder="Nominee's name" required />
                 </label>
                 <label className="label">Contact email
